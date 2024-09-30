@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Enero 2023 - Actualmente...",
+    title: "Front-end React Developer",
+    company: "Tita Media",
+    description:
+      "Implementando componentes React nativos de VTEX IO en tiendas online, ajustándolos a las necesidades del cliente, como también desarrollando componentes personalizados utilizando las siguientes tecnologías: VTEX IO, React, JavaScript, TypeScript, GraphQL, HTML, CSS y Sass.",
+  },
+  {
+    date: "Octubre 2021 - Septiembre 2022",
+    title: "Front-end Developer",
+    company: "Pragma",
+    description: `
+      Desarrolle pruebas unitarias a componentes en angular con jasmine para la aplicación del banco de república dominicana GBM.<br/>
+      Desarrolle componentes para la página de personas en el portal de Bancolombia, utilizando las siguientes tecnologías: Angular, JavaScript, TypeScript, HTML, CSS y Sass.`
+  },
+  {
+    date: "Febreo 2021 - Octubre 2021",
+    title: "Front-end Developer",
+    company: "Newsol Consulting",
+    description: "Desarrolle aplicaciones SAP Fiori utilizando las siguientes tecnologías: SAPUI5, JavaScript, JQuery, HTML y CSS, en el nuevo entorno de desarrollo SAP Business Application Studio de cloud foundry."
+  },
+  {
+    date: "Enero 2019 - Mayo 2019",
+    title: "Front-end Developer",
+    company: "IAS Software",
+    description: "Desarrolle e implemente componentes en el proyecto de Bancolombia, utilizando las siguientes tecnologias: Java con Spring Boot, Angular 7, Angular Material, Bootstrap, JavaScript, HTML, CSS y Oracle Database."
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

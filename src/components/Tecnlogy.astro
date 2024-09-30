@@ -1,0 +1,87 @@
+---
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import REACT from "./icons/React.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Angular from "./icons/Angular.astro";
+import NodeJS from "./icons/NodeJS.astro";
+import Python from "./icons/Python.astro";
+import MongoDB from "./icons/MongoDB.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#003159] text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#003159] text-white",
+    icon: CSS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#003159] text-white",
+    icon: JavaScript,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypeScript,
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-[#003159] text-white",
+    icon: REACT,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#003159] text-white",
+    icon: Angular,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-[#003159] text-white",
+    icon: NodeJS,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Python,
+  },
+  MONGO: {
+    name: "MongoDB",
+    class: "bg-[#003159] text-white",
+    icon: MongoDB,
+  },
+};
+const TECNOLOGIES = [
+  TAGS.HTML,
+  TAGS.CSS,
+  TAGS.JAVASCRIPT,
+  TAGS.TYPESCRIPT,
+  TAGS.REACT,
+  TAGS.ANGULAR,
+  TAGS.NODEJS,
+  TAGS.PYTHON,
+  TAGS.MONGO,
+];
+---
+
+<div>
+  <ul class="flex flex-row mb-2 gap-x-2">
+    {
+      TECNOLOGIES.map((tag) => (
+        <li>
+          <span
+            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3 `}
+          >
+            <tag.icon class="size-4" />
+            {tag.name}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
