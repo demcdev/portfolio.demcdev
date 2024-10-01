@@ -7,7 +7,7 @@ import GitHubIcon from "./icons/GitHub.astro";
 import SocialPill from "@/components/SocialPill.astro";
 ---
 
-<div class="grid grid-cols-[20%_73%] items-center gap-16 mb-4">
+<div class="grid lg:grid-cols-[20%_73%] items-center lg:gap-16 gap-8 mb-4">
   <div class="flex flex-col justify-center items-center">
     <img
       class="rounded-full mb-4 shadow-lg border-4 border-gray-200 dark:border-gray-800 img-avatar"
@@ -18,11 +18,11 @@ import SocialPill from "@/components/SocialPill.astro";
       href="https://linkedin.com/in/demc-dev"
       target="_blank"
       rel="noopener"
-      class="flex w-full items-start mb-4 transition md:justify-start md:hover:scale-105"
+      class="flex lg:w-full items-start mb-4 transition md:justify-start md:hover:scale-105"
     >
       <Badge>Descargar CV</Badge>
     </a>
-    <nav class="flex flex-wrap w-full justify-between">
+    <nav class="flex flex-wrap lg:w-full gap-x-2 justify-between">
       <SocialPill href="mailto:diegomorademc@gmail.com">
         <MailIcon class="size-4" />
       </SocialPill>
@@ -34,17 +34,17 @@ import SocialPill from "@/components/SocialPill.astro";
       </SocialPill>
     </nav>    
   </div>
-  <div>
+  <div class="flex flex-col justify-center items-center">
     <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+      class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-800 dark:text-white"
     >
       Hey, soy Diego Mora
     </h1>
-    <h2 class="text-4xl font-bold mt-4 text-green-500 dark:text-green-500">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 text-green-500 dark:text-green-500">
       Desarrollador Front-end
     </h2>
     <p
-      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-green-500 [&>strong]:text-green-500 [&>strong]:font-semibold dark:text-gray-300"
+      class="text-1xl md:text-xl lg:text-xl text-justify mt-6 text-gray-800 dark:[&>strong]:text-green-500 [&>strong]:text-green-500 [&>strong]:font-semibold dark:text-gray-300"
     >
       Con mas de 3 años de experiencia, me especializo en el desarrollo de
       interfaces atractivas, funcionales y centradas en el usuario.
