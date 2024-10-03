@@ -1,20 +1,68 @@
 ---
 import GitHub from "./icons/GitHub.astro";
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import REACT from "./icons/React.astro";
+import ASTRO from "./icons/AstroMD.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Angular from "./icons/Angular.astro";
+import NodeJS from "./icons/NodeJS.astro";
+import Python from "./icons/Python.astro";
+import VTEX from "./icons/Vtex.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  HTML: {
+    name: "HTML",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#003159] text-white",
+    icon: CSS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#003159] text-white",
+    icon: JavaScript,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypeScript,
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-[#003159] text-white",
+    icon: REACT,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#003159] text-white",
+    icon: Angular,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#003159] text-white",
+    icon: ASTRO,
+  },
+  VTEX: {
+    name: "Vtex IO",
+    class: "bg-[#003159] text-white",
+    icon: VTEX,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-[#003159] text-white",
+    icon: NodeJS,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Python,
   },
 };
 const PROJECTS = [
@@ -24,7 +72,7 @@ const PROJECTS = [
     link: "https://www.bancolombia.com/personas",
     github: "/",
     image: "/projects/app-bancolombia-personas.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.ANGULAR]
   },
   {
     title: "Tienda Juan Valdez",
@@ -32,7 +80,7 @@ const PROJECTS = [
     link: "https://www.tiendajuanvaldez.com/",
     github: "/",
     image: "/projects/app-juan-valdez.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.VTEX]
   },
   {
     title: "Tienda Mattelsa",
@@ -40,15 +88,15 @@ const PROJECTS = [
     link: "https://www.mattelsa.net/",
     github: "/",
     image: "/projects/app-mattelsa.jpeg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.VTEX]
   },
   {
     title: "Tienda Vine",
-    description: "Sitio web tienda Vineeeeee.",
+    description: "Sitio web tienda Vine.",
     link: "https://www.vineonline.co.nz/",
     github: "/",
     image: "/projects/app-vine.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.VTEX]
   },
   {
     title: "Tienda Supermall",
@@ -56,7 +104,7 @@ const PROJECTS = [
     link: "https://www.supermall.pe/",
     github: "/",
     image: "/projects/app-supermall.jpeg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.VTEX]
   },
   {
     title: "App de Posts con Login",
@@ -64,7 +112,7 @@ const PROJECTS = [
     link: "https://reto-titamedia-demc.netlify.app/",
     github: "/",
     image: "/projects/app-posts.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.REACT]
   },
   {
     title: "App de Citas",
@@ -72,7 +120,7 @@ const PROJECTS = [
     link: "https://citas-demc.netlify.app/",
     github: "/",
     image: "/projects/app-citas.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ANGULAR]
   },
   {
     title: "Mi Portfolio",
@@ -80,7 +128,7 @@ const PROJECTS = [
     link: "https://portfolio-demc.netlify.app/",
     github: "https://github.com/DemcCode/portfolio.demccode",
     image: "/projects/app-portfolio-demccode.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO]
   }
 ];
 ---
@@ -105,7 +153,10 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <div class="mb-2 text-gray-800 dark:text-gray-100">
+              {description}
+            </div>
+            <ul class="flex flex-row flex-wrap gap-1">
               {tags.map((tag) => (
                 <li>
                   <span
@@ -117,10 +168,6 @@ const PROJECTS = [
                 </li>
               ))}
             </ul>
-
-            <div class="mt-2 text-gray-800 dark:text-gray-100">
-              {description}
-            </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
                 <LinkButton href={github}>
@@ -160,6 +207,7 @@ const PROJECTS = [
     flex-direction: column;
     justify-content: end;
     border-radius: 1rem;
+    border: 1px solid #545454;
     padding: 26px;
     background: linear-gradient(180deg, hsla(var(--hue), 24%, 40%, .3) 0%, hsla(var(--hue), 24%, 4%, 1) 95%);
   }  
