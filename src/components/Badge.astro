@@ -1,10 +1,14 @@
-<div class="flex w-full items-center ">
-<span class="relative w-full inline-flex overflow-hidden rounded-full p-[1px]">
+<div class="flex w-full items-center">
   <span
-    class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#22C55E_0%,#576168_50%,#22C55E_100%)]"
-  ></span>
-  <div class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-500 bg-slate-900 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap">
-    <slot />
-  </div>
-</span>
+    class="relative w-full inline-flex overflow-hidden rounded-full p-[1px]"
+  >
+    <span
+      class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#22C55E_0%,#576168_50%,#22C55E_100%)]"
+    ></span>
+    <div
+      class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-500 bg-[#192F5A] rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+    >
+      <slot />
+    </div>
+  </span>
 </div>
