@@ -19,19 +19,11 @@ import Tecnlogy from "@/components/Tecnlogy.astro";
   description="Desarrollador y Programador Web con mas de 3 años de experiencia."
 >
   <main class="px-6">
-    <SectionContainer class="lg:py-16 pb-10 pt-20 md:pb-30 md:pt-36">
+    <SectionContainer class="flex lg:h-screen">
       <Hero />
     </SectionContainer>
   </main>
-  <div class="px-6 space-y-16">
-    <SectionContainer id="tecnologias">
-      <TitleSection>
-        <Tecnology class="size-7" />
-        Tecnologias
-      </TitleSection>
-      <Tecnlogy />
-    </SectionContainer>
-
+  <div class="px-6 space-y-16">  
     <SectionContainer id="experiencia">
       <TitleSection>
         <Briefcase class="size-8" />
@@ -46,6 +38,14 @@ import Tecnlogy from "@/components/Tecnlogy.astro";
         Proyectos
       </TitleSection>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="tecnologias">
+      <TitleSection>
+        <Tecnology class="size-7" />
+        Tecnologias
+      </TitleSection>
+      <Tecnlogy />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
