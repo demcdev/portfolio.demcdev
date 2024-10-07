@@ -10,14 +10,16 @@ import FlechaCurva from "./icons/FlechaCurva.astro";
 ---
 
 <ThemeToggle />
-<FlechaCurva />
-<div class="grid lg:grid-cols-[22%_71%] items-center lg:gap-16 gap-8">
+<div class="relative grid lg:grid-cols-[22%_71%] items-center h-fit lg:gap-16 gap-8">
   <div class="flex flex-col justify-center items-center">
-    <img
-      class="rounded-full mb-4 shadow-lg border-4 border-gray-200 dark:border-gray-800 img-avatar"
-      src="/diegomora.webp"
-      alt={personalImageAlt}
-    />
+    <div class="flex justify-center relative img-avatar rounded-full mb-4 shadow-lg border-4 border-[#1D3535e6] dark:border-[#1D3535e6]">
+      <img
+        class="absolute bottom-[44px] rounded-full"
+        src="/diegomora.webp"
+        alt={personalImageAlt}
+      />
+      <span class="absolute bottom-3">Disponible</span>
+    </div>    
     <a
       href="/files/CV_DesarrolladorFrontend_DiegoMora.pdf"
       target="_blank"
@@ -39,22 +41,24 @@ import FlechaCurva from "./icons/FlechaCurva.astro";
       </SocialPill>
     </nav>
   </div>
+  <FlechaCurva />
   <div class="flex flex-col justify-center items-center">
     <h1
-      class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-800 dark:text-white dark:[&>strong]:text-yellow-500"
+      class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-800 dark:text-white dark:[&>strong]:text-[#21C426]"
     >
       Hola, soy <strong>Diego Mora</strong>
     </h1>
     <h2
-      class="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 text-green-500 dark:text-green-500"
+      class="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 text-[#9FC131] dark:text-[#9FC131]"
     >
       Desarrollador Front-end
     </h2>
     <p
-      class="text-1xl md:text-xl lg:text-xl mt-6 text-gray-800 dark:[&>strong]:text-yellow-500 [&>strong]:text-green-500 [&>strong]:font-semibold dark:text-gray-300"
+      class="text-1xl md:text-xl lg:text-xl mt-6 text-gray-800 dark:[&>strong]:text-[#21C426] [&>strong]:text-[#21C426] [&>strong]:font-semibold dark:text-gray-300"
     >
-      Con mas de <strong>3 años de experiencia</strong>, me especializo en el desarrollo de
-      interfaces web atractivas, funcionales y centradas en el usuario.
+      Con mas de <strong>3 años de experiencia</strong>, me especializo en el
+      desarrollo de interfaces web atractivas, funcionales y centradas en el
+      usuario.
     </p>
   </div>
 </div>
@@ -63,6 +67,6 @@ import FlechaCurva from "./icons/FlechaCurva.astro";
     width: 200px;
     height: 200px;
 
-    background: linear-gradient(360deg, #22c55e 0%, #000000 100%);
+    background: linear-gradient(360deg, #21c42694 0%, #161a3094 100%);
   }
 </style>

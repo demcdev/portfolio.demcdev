@@ -24,8 +24,8 @@ const navItems = [
     title: "Contáctame",
     label: "contactame",
     url: "mailto:diegomorademc@gmail.com",
-  }
-]
+  },
+];
 ---
 
 <header
@@ -37,7 +37,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block lg:px-2 px-0 py-2 transition hover:text-green-500 dark:hover:text-green-500"
+          class="relative block lg:px-2 px-0 py-2 transition hover:text-[#21C426] dark:hover:text-[#21C426]"
           aria-label={link.label}
           href={link.url}
         >
@@ -50,44 +50,44 @@ const navItems = [
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-green-500")
+              item.classList.add("text-[#21C426]");
             } else {
-              item.classList.remove("text-green-500")
+              item.classList.remove("text-[#21C426]");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
