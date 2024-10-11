@@ -4,6 +4,7 @@ import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import HTML from "./icons/HTML.astro";
 import CSS from "./icons/CSS.astro";
+import TAILWIND from "./icons/Tailwind.astro";
 import REACT from "./icons/React.astro";
 import ASTRO from "./icons/AstroMD.astro";
 import JavaScript from "./icons/JavaScript.astro";
@@ -23,6 +24,11 @@ const TAGS = {
     name: "CSS",
     class: "bg-[#192F5A] text-white",
     icon: CSS,
+  },
+  TAILWIND: {
+    name: "TAILWIND",
+    class: "bg-[#192F5A] text-white",
+    icon: TAILWIND,
   },
   JAVASCRIPT: {
     name: "JavaScript",
@@ -67,15 +73,15 @@ const TAGS = {
 };
 const PROJECTS = [
   {
-    title: "Web Bancolombia Personas",
-    description: "Sitio web Bancolombia Personas.",
+    title: "Pagina Bancolombia Personas",
+    description: "WEB",
     link: "https://www.bancolombia.com/personas",
     image: "/projects/app-bancolombia-personas.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.ANGULAR],
   },
   {
     title: "Tienda Juan Valdez",
-    description: "Sitio web tienda Juán Valdez.",
+    description: "WEB",
     link: "https://www.tiendajuanvaldez.com/",
     image: "/projects/app-juan-valdez.png",
     tags: [
@@ -89,7 +95,7 @@ const PROJECTS = [
   },
   {
     title: "Tienda Mattelsa",
-    description: "Sitio web tienda Mattelsa.",
+    description: "WEB",
     link: "https://www.mattelsa.net/",
     image: "/projects/app-mattelsa.jpeg",
     tags: [
@@ -103,7 +109,7 @@ const PROJECTS = [
   },
   {
     title: "Tienda Vine",
-    description: "Sitio web tienda Vine.",
+    description: "WEB",
     link: "https://www.vineonline.co.nz/",
     image: "/projects/app-vine.webp",
     tags: [
@@ -117,7 +123,7 @@ const PROJECTS = [
   },
   {
     title: "Tienda Supermall",
-    description: "Sitio web tienda Supermall.",
+    description: "WEB",
     link: "https://www.supermall.pe/",
     image: "/projects/app-supermall.jpeg",
     tags: [
@@ -130,8 +136,21 @@ const PROJECTS = [
     ],
   },
   {
+    title: "Clon Mercado Libre",
+    description: "WEB",
+    link: "https://clon-mercado-libre.netlify.app/",
+    image: "/projects/app-mercado-libre.webp",
+    tags: [
+      TAGS.CSS,
+      TAGS.TAILWIND,
+      TAGS.JAVASCRIPT,
+      TAGS.TYPESCRIPT,
+      TAGS.REACT,
+    ],
+  },
+  {
     title: "App de Posts con Login",
-    description: "Aplicación de posts con login y filtrado por categoría.",
+    description: "WEB",
     link: "https://reto-titamedia-demc.netlify.app/",
     github: "https://github.com/DemcCode/reto-tita-media",
     image: "/projects/app-posts.png",
@@ -139,19 +158,19 @@ const PROJECTS = [
   },
   {
     title: "App de Citas",
-    description: "Sitio web para agendar y eliminar citas.",
+    description: "WEB",
     link: "https://citas-demc.netlify.app/",
     github: "/",
     image: "/projects/app-citas.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ANGULAR],
   },
   {
-    title: "Mi Portfolio",
-    description: "Sitio web oficial de mi portfolio personal.",
+    title: "Mi Portafolio",
+    description: "WEB",
     link: "https://portafolio-demc.netlify.app/",
     github: "https://github.com/DemcCode/portfolio.demccode",
     image: "/projects/app-portfolio-demccode.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTRO],
   },
 ];
 ---
