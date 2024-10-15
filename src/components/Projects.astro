@@ -73,7 +73,21 @@ const TAGS = {
 };
 const PROJECTS = [
   {
-    title: "Pagina Bancolombia Personas",
+    title: "Clon Mercado Libre",
+    description: "WEB",
+    link: "https://clon-mercado-libre.netlify.app/",
+    github: "https://github.com/DemcCode/clon-mercadolibre",
+    image: "/projects/app-mercado-libre.jpg",
+    tags: [
+      TAGS.CSS,
+      TAGS.TAILWIND,
+      TAGS.JAVASCRIPT,
+      TAGS.TYPESCRIPT,
+      TAGS.REACT,
+    ],
+  },
+  {
+    title: "Bancolombia Personas",
     description: "WEB",
     link: "https://www.bancolombia.com/personas",
     image: "/projects/app-bancolombia-personas.png",
@@ -134,20 +148,7 @@ const PROJECTS = [
       TAGS.REACT,
       TAGS.VTEX,
     ],
-  },
-  {
-    title: "Clon Mercado Libre",
-    description: "WEB",
-    link: "https://clon-mercado-libre.netlify.app/",
-    image: "/projects/app-mercado-libre.webp",
-    tags: [
-      TAGS.CSS,
-      TAGS.TAILWIND,
-      TAGS.JAVASCRIPT,
-      TAGS.TYPESCRIPT,
-      TAGS.REACT,
-    ],
-  },
+  },  
   {
     title: "App de Posts con Login",
     description: "WEB",
@@ -157,20 +158,12 @@ const PROJECTS = [
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.REACT],
   },
   {
-    title: "App de Citas",
+    title: "App para agendar Citas",
     description: "WEB",
     link: "https://citas-demc.netlify.app/",
     github: "/",
     image: "/projects/app-citas.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ANGULAR],
-  },
-  {
-    title: "Mi Portafolio",
-    description: "WEB",
-    link: "https://portafolio-demc.netlify.app/",
-    github: "https://github.com/DemcCode/portfolio.demccode",
-    image: "/projects/app-portfolio-demccode.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTRO],
   },
 ];
 ---
@@ -206,17 +199,17 @@ const PROJECTS = [
                 </li>
               ))}
             </ul>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  Code
-                </LinkButton>
-              )}
+            <footer class="flex items-end justify-start mt-4 gap-x-4">              
               {link && (
                 <LinkButton href={link}>
                   <Link class="size-4" />
                   Preview
+                </LinkButton>
+              )}
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
                 </LinkButton>
               )}
             </footer>
