@@ -13,6 +13,7 @@ import Angular from "./icons/Angular.astro";
 import NodeJS from "./icons/NodeJS.astro";
 import Python from "./icons/Python.astro";
 import VTEX from "./icons/Vtex.astro";
+import SHOPIFY from "./icons/Shopify.astro";
 
 const TAGS = {
   HTML: {
@@ -60,6 +61,11 @@ const TAGS = {
     class: "bg-[#192F5A] text-white",
     icon: VTEX,
   },
+  SHOPIFY: {
+    name: "Shopify",
+    class: "bg-[#192F5A] text-white",
+    icon: SHOPIFY,
+  },
   NODEJS: {
     name: "Node.js",
     class: "bg-[#192F5A] text-white",
@@ -73,13 +79,39 @@ const TAGS = {
 };
 const PROJECTS = [
   {
+    title: "Colchones Roomi",
+    description: "WEB",
+    link: "https://roomishop.mx/",
+    image: "/projects/app-roomi.jpg",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JAVASCRIPT,
+      TAGS.SHOPIFY,
+    ],
+  },
+  {
+    title: "Uniandes",
+    description: "WEB",
+    link: "https://tienda.uniandes.edu.co/",
+    image: "/projects/app-uniandes.jpg",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JAVASCRIPT,
+      TAGS.TYPESCRIPT,
+      TAGS.REACT,
+      TAGS.VTEX,
+    ],
+  },
+  {
     title: "Clon Mercado Libre",
     description: "WEB",
     link: "https://clon-mercado-libre.netlify.app/",
     github: "https://github.com/DemcCode/clon-mercadolibre",
     image: "/projects/app-mercado-libre.jpg",
     tags: [
-      TAGS.CSS,
+      TAGS.HTML,
       TAGS.TAILWIND,
       TAGS.JAVASCRIPT,
       TAGS.TYPESCRIPT,
